@@ -19,7 +19,8 @@
    float: right;
    width: 200px;
    height: 2000px;
-   background-color: #ccc;
+   background-color: #4D394B;
+   color: white;
    margin: 0;
    padding: 0;
  }
@@ -34,7 +35,13 @@
    position: fixed;
    width: 200px;
    height: 100%;
-   background-color: red;
+   background-color: #4D394B;
+   color: white;
+   font-weight: bold;
    margin: 0;
-   padding: 0;
+   padding: 5px 0px 0px 5px;
  }
+#lname-ul{
+padding: 0;
+margin: 0;
+}
