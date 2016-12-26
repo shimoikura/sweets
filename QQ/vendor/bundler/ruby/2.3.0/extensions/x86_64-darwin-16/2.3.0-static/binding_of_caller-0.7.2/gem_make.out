@@ -1,0 +1,16 @@
+current directory: /Users/Ryoma/workspace/sweets/QQ/vendor/bundler/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+/Users/Ryoma/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20161226-46185-128l2f.rb extconf.rb
+
+current directory: /Users/Ryoma/workspace/sweets/QQ/vendor/bundler/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: /Users/Ryoma/workspace/sweets/QQ/vendor/bundler/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /Users/Ryoma/workspace/sweets/QQ/vendor/bundler/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.
