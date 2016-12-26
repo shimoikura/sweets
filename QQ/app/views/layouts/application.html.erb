@@ -7,8 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= render partial:'layouts/top.html.erb' %>
 
-<%= yield %>
+<%= render partial:'layouts/sidebar_left.html.erb' %>
+<div id="content">
+  <%= yield %>
+</div>
+<%= render partial:'layouts/sidebar_right.html.erb' %>
 
 </body>
 </html>

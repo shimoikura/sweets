@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @channel.name %>
+</p>
+
+<p>
+  <strong>Teacher:</strong>
+  <%= @channel.teacher %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @channel.time %>
+</p>
+
+<p>
+  <strong>Slide:</strong>
+  <%= @channel.slide %>
+</p>
+
+<p>
+  <strong>Syllabus:</strong>
+  <%= @channel.syllabus %>
+</p>
+
+<%= link_to 'Edit', edit_channel_path(@channel) %> |
+<%= link_to 'Back', channels_path %>

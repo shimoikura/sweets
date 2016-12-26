@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  teacher: MyString
+  time: 2016-12-26 19:02:19
+  slide: MyString
+  syllabus: MyString
+
+two:
+  name: MyString
+  teacher: MyString
+  time: 2016-12-26 19:02:19
+  slide: MyString
+  syllabus: MyString
