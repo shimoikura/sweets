@@ -2,8 +2,11 @@
  <ul id="lname-ul" style="list-style-type: none">
    <% @channels.each do |channel| %>
     <li>
-      <%= link_to channel.name , channel_path(channel.id) %>
+      <%= link_to channel.name , channel_path(channel.id),class:"channel-link" %>
     </li>
    <% end %>
+    <li>
+      <%= link_to '授業評価' , channels_manage_path,class:"channel-link" %>
+    </li>
   </ul>
 </div>
