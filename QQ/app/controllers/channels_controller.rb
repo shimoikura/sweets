@@ -63,6 +63,13 @@ class ChannelsController < ApplicationController
     end
   end
 
+  def manage
+    @channels = Channel.all
+    @channel = Channel.find(1)
+    @join_count = [[1 , 60], [2, 65], [3, 64],[4 , 60], [5, 65], [6, 64],[7 , 100], [8, 65], [9, 64]]
+    @evidence = [['よく理解できた',10],['理解できた',20],['あまり理解できなかった',5],['理解できなかった',30]]
+  end
+
 
   def callSlideshare(memo)
     require 'rexml/document'

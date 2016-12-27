@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  get 'channels/manage' => 'channels#manage'
   resources :comments
   resources :channels
   resources :users
