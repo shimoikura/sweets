@@ -11,10 +11,10 @@ class ChannelsController < ApplicationController
 
   # GET /channels/1
   # GET /channels/1.json
-  def show  
+  def show
       @channels = Channel.all
       @comments = Comment.all
-      self.callSlideshare('http://www.slideshare.net/lemiorhan/test-driven-design-gdg-devfest-istanbul-2016')
+      self.callSlideshare(@channel.slide)
   end
 
   # GET /channels/new
