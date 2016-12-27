@@ -12,6 +12,72 @@
 <% end %>
 
 
+  <tbody>
+    <% @channels.each do |channel| %>
+      <tr>
+        <td><%= channel.name %></td>
+        <td><%= channel.teacher %></td>
+        <td><%= channel.time %></td>
+        <td><%= channel.slide %></td>
+        <td><%= channel.syllabus %></td>
+        <td><%= link_to 'Show', channel %></td>
+        <td><%= link_to 'Edit', edit_channel_path(channel) %></td>
+        <td><%= link_to 'Destroy', channel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+
+    <% @comments.each do |comment| %>
+    <hr>
+      <div class="comment" >
+        <span style="background-color:#EDF7FF;">
+          <div>
+            <h2>Q<%= comment.id %>&nbsp;<font color="lightgreen">Resolved</font></h2>
+          </div>
+        </span>
+        <span><%= comment.content %><br>&nbsp;<span class="date">(<%= comment.created_at.strftime('%Y年%m月%d日 %H:%M:%S') %>)</span><br><br>
+        </span>
+        <span><center>
+          <%= image_tag("grayheart.png",:id => "heart1", :size => "20x20") %>
+          <%= image_tag("pinkheart.png",:id => "heart2", :size => "20x20") %>
+        <%= comment.favorite %>
+      </center></span>
+      </div>
+      <% end %>
+    <hr>
+      <div class="comment" >
+        <span style="background-color:#EDF7FF;">
+          <div>
+            <h2>Q4&nbsp;<font color="red">Unsolved</font></h2>
+          </div>
+          <div class="slide">aaa</div>
+        </span>
+        <span>~~~~~~~~~~~~~~~が分かりません。教えてください。<br>&nbsp;<span class="date">(2016.12.27 16:40)</span>
+        </span>
+        <span>
+          <h1 class="heart1">♡</h1><h1 class="heart2"><font color="red">♥</font></h1>
+        </span>
+      </div>
+
+      <div id="review">
+        今日の内容は理解できましたか？<br>
+          <span>
+            <input type="checkbox" >よく理解できた
+            <input type="checkbox" >理解できた
+            <input type="checkbox" >あまり理解できなかった
+            <input type="checkbox" >理解できなかった<br>
+            <center><input type="submit" value="送信"></center>
+          </span>
+      </div>
+
+  </tbody>
+</table>
+
+
+<%= form_for :comment, url: comments_path do |f| %>
+<font size="3px"><%= f.label :質問 %></font>
+<%= f.text_area :content, size: "70x10" %><br>
+<center><%= f.submit %></center>
+<% end %>
 
 
 <%= link_to 'New Channel', new_channel_path %>
