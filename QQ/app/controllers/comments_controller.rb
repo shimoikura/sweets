@@ -10,6 +10,7 @@ class CommentsController < ApplicationController
   # GET /comments/1
   # GET /comments/1.json
   def show
+    redirect_to :back
   end
 
   # GET /comments/new
