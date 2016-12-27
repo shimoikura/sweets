@@ -23,7 +23,10 @@
             </h2>
           </div>
         </span>
-        <span><%= comment.content %><br>&nbsp;<span class="date">(<%= comment.created_at.strftime('%Y年%m月%d日 %H:%M:%S') %>)</span><br><br>
+        <span class="user-icon">
+          ■
+        </span>
+        <span><%= comment.content %>&nbsp;<span class="date">(<%= comment.created_at.strftime('%m/%d %H:%M') %>)</span><br><br>
         </span>
         <span><center>
           <%= image_tag("grayheart.png",:id => "heart1", :size => "20x20") %>
