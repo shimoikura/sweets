@@ -12,6 +12,9 @@ class ChannelsController < ApplicationController
   # GET /channels/1
   # GET /channels/1.json
   def show
+      @channels = Channel.all
+      @comments = Comment.all
+      self.callSlideshare(@channel.slide)
   end
 
   # GET /channels/new

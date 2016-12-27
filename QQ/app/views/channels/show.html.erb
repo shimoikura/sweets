@@ -1,29 +1,67 @@
+<%= render partial:'layouts/top.html.erb' %>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @channel.name %>
-</p>
+<dd>
+  <iframe src="http://www.slideshare.net/slideshow/embed_code/<%= @slideId %>?rel=0" width="800" height="500"
+            frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;
+            border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen>
+  </iframe>
+</dd>
 
-<p>
-  <strong>Teacher:</strong>
-  <%= @channel.teacher %>
-</p>
+    <% @comments.each do |comment| %>
+    <hr>
+      <div class="comment" >
+        <span style="background-color:#EDF7FF;">
+          <div>
+            <h2>Q<%= comment.id %>&nbsp;
+             <% if comment.status = 1 %>
+              <font color="red">Unsolved</font>
+             <% else %>
+              <font color="lightgreen">Resolved</font>
+             <% end %>
+            </h2>
+          </div>
+        </span>
 
-<p>
-  <strong>Time:</strong>
-  <%= @channel.time %>
-</p>
+        <div class='content'>
+          <span class="user-icon">
+            ■
+          </span>
+          <%= comment.content %>
+          &nbsp;
+          <span class="date">(<%= comment.created_at.strftime('%m/%d %H:%M') %>)</span>
+          <br>
+          <br>
+        </div>
+        <span><center>
+          <%= image_tag("grayheart.png",:id => "heart1", :size => "20x20") %>
+          <%= image_tag("pinkheart.png",:id => "heart2", :size => "20x20") %>
+        <%= comment.favorite %>
+      </center></span>
+      </div>
+      <% end %>
+    <hr>
+      <div id="review">
+        今日の内容は理解できましたか？<br>
+          <span>
+            <input type="checkbox" >よく理解できた
+            <input type="checkbox" >理解できた
+            <input type="checkbox" >あまり理解できなかった
+            <input type="checkbox" >理解できなかった<br>
+            <center><input type="submit" value="送信"></center>
+          </span>
+      </div>
 
-<p>
-  <strong>Slide:</strong>
-  <%= @channel.slide %>
-</p>
+  </tbody>
+</table>
 
-<p>
-  <strong>Syllabus:</strong>
-  <%= @channel.syllabus %>
-</p>
 
-<%= link_to 'Edit', edit_channel_path(@channel) %> |
-<%= link_to 'Back', channels_path %>
+<%= form_for :comment, url: comments_path do |f| %>
+<font size="3px"><%= f.label :質問 %></font>
+<%= f.text_area :content, size: "70x10" %><br>
+<center><%= f.submit %></center>
+<% end %>
+
+
+<%= link_to 'New Channel', new_channel_path %>

@@ -1,3 +1,26 @@
 // Place all the styles related to the Channels controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-icon{
+  font-size: 20px;
+  color: red;
+}
+
+.date{
+  color:#aaa;
+}
+
+.content{
+  width: 70%;
+}
+
+li{
+  a.channel-link{
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-top: 10px;
+  }
+}
