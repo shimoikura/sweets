@@ -1,18 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Channels</h1>
+<% @comments.each do |comment| %>
+  <h1><%= comment.content %></h1>
+<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Teacher</th>
-      <th>Time</th>
-      <th>Slide</th>
-      <th>Syllabus</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
   <tbody>
     <% @channels.each do |channel| %>
@@ -80,5 +71,6 @@
 <%= f.text_area :content, size: "70x10" %><br>
 <center><%= f.submit %></center>
 <% end %>
+
 
 <%= link_to 'New Channel', new_channel_path %>
