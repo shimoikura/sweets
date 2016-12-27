@@ -29,6 +29,8 @@
    float:left;
  }
 
+
+
  #sidebar-left{
    float: left;
    position: fixed;
@@ -43,4 +45,20 @@
 #lname-ul{
 padding: 0;
 margin: 0;
+}
+
+span{
+  font-weight: bold;
+}
+span#lname-top{
+  padding: 0px 0px 0px 5px;
+  margin: 10px 0px 0px 0px;
+  font-size: xx-large;
+}
+span.subtxt{
+  font-size: x-large;
+}
+sub#top{
+  font-size: large;
+  vertical-align:middle;
 }
