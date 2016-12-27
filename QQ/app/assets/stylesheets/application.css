@@ -63,10 +63,14 @@ margin: 0;
     margin: 5px;
   }
 }
+
 div#topt{
   margin: 10px 0px;
 }
-
+div#left-top{
+  font-size: x-large;
+  margin: 50px 0px 10px 5px;
+}
 span{
   font-weight: bold;
 }
