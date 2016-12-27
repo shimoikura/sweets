@@ -58,7 +58,8 @@ span#lname-top{
 span.subtxt{
   font-size: x-large;
 }
-sub#top{
+div#subtop{
+  color: #999999;
   font-size: large;
   vertical-align:middle;
 }
