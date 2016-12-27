@@ -63,6 +63,9 @@ margin: 0;
     margin: 5px;
   }
 }
+div#topt{
+  margin: 10px 0px;
+}
 
 span{
   font-weight: bold;
