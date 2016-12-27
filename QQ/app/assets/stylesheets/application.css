@@ -16,10 +16,12 @@
 
 
  #sidebar-right{
-   float: right;
+   position: fixed;
+   top: 0 ;
+   right: 0;
    width: 200px;
    height: 2000px;
-   background-color: #4D394B;
+   background-color: #F2F2F2;
    color: white;
    margin: 0;
    padding: 0;
