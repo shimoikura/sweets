@@ -37,12 +37,25 @@
         <span><%= comment.content %><br>&nbsp;<span class="date">(<%= comment.created_at.strftime('%Y年%m月%d日 %H:%M:%S') %>)</span><br><br>
         </span>
         <span><center>
-          <%= image_tag("grayheart.png",:id => "heart1", :size => "20x20") %>
-          <%= image_tag("pinkheart.png",:id => "heart2", :size => "20x20") %>
-        <%= comment.favorite %>
+          <%= image_tag("grayarrow.png", :size => "20x20", :id => "onclick") %>&nbsp;
+          <%= image_tag("grayheart.png",:class => "heart1", :size => "20x20") %>
+          <%= image_tag("pinkheart.png",:class => "heart2", :size => "20x20") %>
+          <%= comment.favorite %>
       </center></span>
       </div>
+
+      <!-- リプライ（解答） -->
+      <%= form_for :comment, url: comments_path, html: {:class => "reply",:id => "reply"} do |f| %>
+        <%= f.label :解答 %>
+        <%= f.text_area :content, size: "70x5" %><br>
+        <%= f.submit %>
       <% end %>
+
+      <% end %>
+
+
+
+
     <hr>
       <div class="comment" >
         <span style="background-color:#EDF7FF;">
@@ -53,9 +66,11 @@
         </span>
         <span>~~~~~~~~~~~~~~~が分かりません。教えてください。<br>&nbsp;<span class="date">(2016.12.27 16:40)</span>
         </span>
-        <span>
-          <h1 class="heart1">♡</h1><h1 class="heart2"><font color="red">♥</font></h1>
-        </span>
+        <span><center>
+          <%= image_tag("grayarrow.png", :size => "20x20", :id => "onclick") %>&nbsp;
+          <%= image_tag("grayheart.png",:class => "heart1", :size => "20x20") %>
+          <%= image_tag("pinkheart.png",:class => "heart2", :size => "20x20") %>
+        </center></span>
       </div>
 
       <div id="review">
